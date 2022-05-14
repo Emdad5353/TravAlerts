@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="maxLengthEmail">32</integer>
+    <integer name="maxLengthPassword">32</integer>
+    <integer name="maxLengthPhoneNumber">16</integer>
+</resources>

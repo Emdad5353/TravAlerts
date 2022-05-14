@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_extra_small"
+    android:layout_marginEnd="@dimen/margin_extra_small"
+    android:layout_marginBottom="@dimen/margin_extra_small"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="4dp"
+    app:cardBackgroundColor="@color/card_background_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNotificationThumbnail"
+            android:layout_width="82dp"
+            android:layout_marginTop="@dimen/margin_xx_small"
+            android:layout_height="82dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/london_bridge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPlaceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/tvCreatedAt"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout_toEndOf="@+id/ivNotificationThumbnail"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_black"
+            android:paddingStart="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_small"
+            android:text="You are in the *British Museum*. How do you feel about it."
+            android:textColor="@color/textColorTitle" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout_toStartOf="@+id/ivLocation"
+            android:textSize="@dimen/text_size_caption"
+            android:textColor="@color/textColorGray"
+            android:text="5 min ago" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShareYourExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:layout_marginStart="@dimen/margin_extra_small"
+            android:paddingStart="@dimen/margin_extra_small"
+            android:layout_centerHorizontal="true"
+            android:paddingEnd="@dimen/padding_extra_small"
+            android:layout_below="@+id/tvPlaceName"
+            android:textColor="@color/colorPrimary"
+            android:background="?attr/selectableItemBackground"
+            android:layout_toEndOf="@+id/ivNotificationThumbnail"
+            android:text="Share your experience" />
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

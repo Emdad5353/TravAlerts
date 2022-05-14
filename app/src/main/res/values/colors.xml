@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!--  Material Color Palate:: Start  -->
+    <color name="colorPrimary">#003049</color>
+    <color name="colorPrimaryLight">#14213D</color>
+    <color name="colorPrimaryDark">#03071E</color>
+    <color name="colorAccent">#144552</color>
+
+    <color name="primaryTextColor">#212121</color>
+    <color name="secondaryTextColor">#757575</color>
+    <color name="dividerColor">#BDBDBD</color>
+    <color name="textOrIconColor">#FFFFFF</color>
+    <!--  Material Color Palate:: End  -->
+
+    <color name="fragment_background_color">#f2f2f2</color>
+    <color name="card_background_color">#F8F8F8</color>
+
+
+    <color name="gray">#8f8f8f</color>
+    <color name="light_gray">#d3d3d3</color>
+
+
+    <color name="global_text_color">#404040</color>
+    <color name="textColorSubTitle">#A4A4A4</color>
+    <color name="textColorGray">#6C6C6C</color>
+    <color name="textColorLiteWhite">#F3F3F3</color>
+    <color name="textHintColorGray">#868686</color>
+    <color name="textColorTitle">#1F1F1F</color>
+    <color name="textColorProgressBar">#868686</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent">#28000000</color>
+    <color name="medium_transparent">#16000000</color>
+
+    <color name="btn_color_gradient_start">#5574F7</color>
+    <color name="btn_color_gradient_end">#60C3FF</color>
+
+    <color name="danger_color_dark">#CC0000</color>
+    <color name="danger_color">#ff4444</color>
+    <color name="success_color">#00C851</color>
+    <color name="success_color_dark">#007E33</color>
+    <color name="info_color">#33b5e5</color>
+    <color name="info_color_dark">#0099CC</color>
+    <color name="elegant_color">#2E2E2E</color>
+    <color name="elegant_color_dark">#212121</color>
+    <color name="post_background_color">#0F003049</color>
+
+
+    <color name="color_fragment_background">#313439</color>
+    <color name="marker">#B3170B</color>
+    <color name="textColorDefault">#272727</color>
+    <color name="profileAccentColor">#F7F7F7</color>
+
+</resources>

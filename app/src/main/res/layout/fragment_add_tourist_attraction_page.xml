@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingEnd="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_medium"
+        tools:context=".views.fragments.AddTouristAttractionPageFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPlaceName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPlaceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:hint="@string/enter_place_name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPlaceDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tilPlaceName"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:gravity="top"
+                android:hint="@string/enter_place_description"
+                android:lines="3" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPlaceDescription"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:gravity="top"
+                android:hint="@string/enter_place_address"
+                android:lines="3" />
+
+            <!--<ImageView
+                android:id="@+id/ivPlaceImage"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@+id/etAddress"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:src="@drawable/upload_photo" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnUpload"
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivPlaceImage"
+                android:text="@string/upload" />-->
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etImageLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etAddress"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:hint="Past the image url here" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etImageLink"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/location"
+                android:textSize="@dimen/text_size_h6" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnChooseLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLocation"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:background="?attr/selectableItemBackground"
+                android:text="Choose Location"
+                android:textColor="@color/colorPrimaryDark" />
+
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/seekBarRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnChooseLocation"
+                android:max="10"
+                android:min="1"
+                android:progress="5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSeekBarValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seekBarRange"
+                android:text="Range: 100 m" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSeekBarValue"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:background="@drawable/button_background_blue"
+                android:text="Add Place"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/guestUI"
+        layout="@layout/ui_guest_login"
+        android:visibility="gone" />
+
+</RelativeLayout>

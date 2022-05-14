@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color"
+    tools:context=".views.activities.SearchActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSearchMsg"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:textColor="@color/textColorGray"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_height="wrap_content"
+        android:text="Type place name to search." />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

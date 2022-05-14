@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background_color"
+    tools:context=".views.activities.EditProfileActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimary" />
+
+
+    <FrameLayout
+        android:id="@+id/flProfilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUserAvatar"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:padding="@dimen/padding_medium"
+            android:background="@drawable/ic_account" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivEditProfilePic"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/bg_edit_avatar"
+            android:padding="@dimen/padding_small"
+            android:src="@drawable/ic_edit"
+            android:tint="@color/colorPrimary"
+            tools:ignore="RtlHardcoded" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llUserNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flProfilePic"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiETFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_weight="1"
+            android:background="@drawable/backgraound_input_layout_border_only"
+            android:ems="10"
+            android:hint="@string/first_name"
+            android:inputType="textEmailAddress"
+            android:maxLength="@integer/maxLengthEmail"
+            android:padding="@dimen/padding_small"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_default"
+            android:paddingBottom="@dimen/padding_small"
+            android:textColorHint="@color/textHintColorGray" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiETLastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_weight="1"
+            android:background="@drawable/backgraound_input_layout_border_only"
+            android:ems="10"
+            android:hint="@string/last_name"
+            android:inputType="textEmailAddress"
+            android:maxLength="@integer/maxLengthEmail"
+            android:padding="@dimen/padding_small"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_default"
+            android:paddingBottom="@dimen/padding_small"
+            android:textColorHint="@color/textHintColorGray" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tiETPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llUserNameInput"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:background="@drawable/backgraound_input_layout_border_only"
+        android:ems="10"
+        android:hint="@string/phone_number_440_xxxx_xxxxxx"
+        android:inputType="textEmailAddress"
+        android:maxLength="@integer/maxLengthEmail"
+        android:padding="@dimen/padding_small"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:textColorHint="@color/textHintColorGray"
+        app:drawableTint="@color/gray"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_below="@+id/tiETPhoneNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/button_background_blue"
+        android:paddingStart="@dimen/padding_xx_large"
+        android:paddingEnd="@dimen/padding_xx_large"
+        android:text="@string/update"
+        android:textColor="@color/white"
+        app:elevation="4dp" />
+
+</RelativeLayout>

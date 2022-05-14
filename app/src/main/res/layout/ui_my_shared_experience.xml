@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/my_shared_experience"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/post_background_color"
+        android:layout_below="@+id/tvShareYourExperience"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:contentPadding="@dimen/padding_small"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/margin_xx_small"
+                android:background="@drawable/ic_account" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_toEndOf="@+id/ivProfilePic"
+                android:fontFamily="@font/lato_bold"
+                android:paddingBottom="@dimen/padding_extra_small"
+                android:textColor="@color/textColorTitle"
+                android:textSize="@dimen/text_size_h5"
+                tools:text="Test User" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivVisitorType"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/tvName"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_toEndOf="@+id/ivProfilePic"
+                android:src="@drawable/ic_guest_user" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVisitorType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvName"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:layout_toEndOf="@+id/ivVisitorType"
+                android:text="@string/non_visitor"
+                android:textColor="@color/textColorDefault"
+                android:textSize="@dimen/text_size_caption" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEditPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/padding_xx_small"
+                android:src="@drawable/ic_edit"
+                android:tint="@color/colorPrimary" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCreatedAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/vDivider"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/lato_regular"
+                android:text="15 min ago"
+                android:textColor="@color/textColorSubTitle" />
+
+            <View
+                android:id="@+id/vDivider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/tvVisitorType"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:background="@color/light_gray" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPostImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/vDivider"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:textSize="@dimen/text_size_body_1"
+                android:layout_marginBottom="@dimen/margin_extra_small"
+                android:paddingStart="@dimen/padding_small"
+                android:paddingEnd="@dimen/padding_small"
+                android:fontFamily="@font/lato_regular"
+                android:layout_below="@id/ivPostImage"
+                android:text="lorem ipsum" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/myRatingExperience"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvComment"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</merge>

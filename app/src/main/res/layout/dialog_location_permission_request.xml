@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragment_background_color">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingEnd="@dimen/padding_default"
+        android:paddingBottom="@dimen/padding_medium"
+        android:text="@string/location_permission_required"
+        android:textColor="@color/textColorLiteWhite"
+        android:textSize="@dimen/text_size_h5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocationPermissionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvForgotPassword"
+        android:padding="@dimen/padding_default"
+        android:text="@string/location_permission_detail_explanation"
+        android:textSize="@dimen/text_size_body_1" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCloseApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLocationPermissionText"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:layout_toStartOf="@+id/btnRequestPermission"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingEnd="@dimen/padding_default"
+        android:text="Deny"
+        android:textColor="@color/colorPrimary" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRequestPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLocationPermissionText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:paddingStart="@dimen/padding_default"
+        android:paddingEnd="@dimen/padding_default"
+        android:text="ACCEPT"
+        android:textColor="@color/colorPrimary" />
+</RelativeLayout>

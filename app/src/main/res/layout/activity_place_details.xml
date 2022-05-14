@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.activities.PlaceDetailsActivity"
+    android:paddingStart="@dimen/padding_small"
+    android:paddingEnd="@dimen/padding_small"
+    android:background="@color/fragment_background_color"
+    >
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_default"
+        android:padding="@dimen/padding_small"
+        android:indeterminate="true"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvPlaceDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout_marginBottom="@dimen/margin_default">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPlaceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_black"
+                android:maxLines="1"
+                android:text="London Bridge"
+                android:textColor="@color/textColorTitle"
+                android:textSize="@dimen/text_size_h5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_xx_small"
+                android:paddingBottom="@dimen/padding_xx_small"
+                android:layout_below="@id/tvPlaceName"
+                android:layout_alignParentStart="true"
+                android:text="some area" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAddress"
+                android:clickable="false"
+                android:numStars="5"
+                android:rating="3.5"
+                android:stepSize="0.5"
+                app:elevation="@dimen/elevation_extra_small" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPlaceImage"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_below="@+id/rating"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/london_bridge" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_below="@id/ivPlaceImage"
+                android:textSize="@dimen/text_size_caption"
+                android:textColor="@color/textColorGray"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDescriptionLabel"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="London Bridge is a bridge in Lake Havasu City, Arizona. It was originally built in the 1830s and formerly spanned the River Thames in London, England. The bridge was purchased by Robert P. McCulloch from the City of London in 1968. ... The rededication of the London Bridge took place on October 10, 1971." />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLocationFull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDescription"
+                android:textColor="@color/textColorGray"
+                android:textSize="@dimen/text_size_caption"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="Location" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDescription"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:src="@drawable/ic_location" />
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                map:cameraBearing="112.5"
+                map:cameraTargetLat="-33.796923"
+                map:cameraTargetLng="150.922433"
+                map:cameraTilt="30"
+                map:cameraZoom="13"
+                map:mapType="normal"
+                map:uiCompass="false"
+                map:uiRotateGestures="true"
+                map:uiScrollGestures="false"
+                map:uiTiltGestures="true"
+                map:uiZoomControls="true"
+                map:uiZoomGestures="true"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@id/ivLocation"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_default" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShareYourExperience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/map"
+                android:layout_margin="@dimen/margin_extra_small"
+                android:fontFamily="@font/lato_bold"
+                android:paddingTop="@dimen/padding_default"
+                android:text="@string/share_your_experience"
+                android:textColor="@color/textColorGray"
+                android:textSize="@dimen/text_size_caption" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvShareExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvShareYourExperience"
+                android:layout_marginTop="@dimen/margin_small"
+                app:cardCornerRadius="@dimen/cardview_card_corner_radius_small"
+                app:cardElevation="@dimen/cardview_card_elevation_small"
+                app:contentPadding="@dimen/padding_small">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etExperience"
+                        android:layout_width="match_parent"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:gravity="top"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/write_your_experience" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llUploadImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etExperience"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_small">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/upload_photo" />
+
+                        <TextView
+                            android:id="@+id/tvUpload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/upload_image_or_video" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/ratingExperience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:layout_below="@id/llUploadImage" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ratingExperience"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:background="@drawable/button_background_blue"
+                        android:text="@string/share"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/my_shared_experience"
+                layout="@layout/ui_my_shared_experience"
+                android:layout_below="@+id/tvShareYourExperience"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSharedExperiences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvShareExperience"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:text="@string/shared_experiences"
+                android:textColor="@color/textColorGray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSharedExperiencesEmptyListMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvSharedExperiences"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:text="@string/no_expiration_has_been_shared_so_far"
+                android:textColor="@color/textColorGray" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSharedExperiences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSharedExperiences" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
