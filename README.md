@@ -52,6 +52,12 @@ password: 123456
     <img src="TravAlerts Additional Files/Wireframe/13. Notification Prompt.png" width="20%">
 </div>
 
+
+<br><p><b>App Apk:</b></p>
+<p>Debug Apk and Release Apk</p>(https://github.com/Emdad5353/TravAlerts/files/8692167/TravAlerts_Apk.zip)
+
+
+
 <br><p><b>App Video Demonstration:</b></p>
 https://user-images.githubusercontent.com/82696518/168408521-fb665d8c-73bb-4b98-8cd2-8495667055db.mp4
 
