@@ -11,6 +11,19 @@ email: ew@g.co
 password: 123456
 
 
+<br><p><b>App Apk:</b></p>
+<p>Debug Apk and Release Apk</p> https://github.com/Emdad5353/TravAlerts/files/8692167/TravAlerts_Apk.zip
+
+
+
+<br><p><b>App Video Demonstration:</b></p>
+https://user-images.githubusercontent.com/82696518/168408521-fb665d8c-73bb-4b98-8cd2-8495667055db.mp4
+
+
+
+<br><p><b>App Documentation:</b></p>
+[TravAlerts_Report.docx](https://github.com/Emdad5353/TravAlerts/files/8692020/TravAlerts_Report.docx)
+
 <br><p><b>App Screenshots:</b></p>
 <div class="column">
     <img src="TravAlerts Additional Files/app logo.png" width="20%">
@@ -51,17 +64,3 @@ password: 123456
     <img src="TravAlerts Additional Files/Wireframe/12. Edit Profile.png" width="20%">
     <img src="TravAlerts Additional Files/Wireframe/13. Notification Prompt.png" width="20%">
 </div>
-
-
-<br><p><b>App Apk:</b></p>
-<p>Debug Apk and Release Apk</p>(https://github.com/Emdad5353/TravAlerts/files/8692167/TravAlerts_Apk.zip)
-
-
-
-<br><p><b>App Video Demonstration:</b></p>
-https://user-images.githubusercontent.com/82696518/168408521-fb665d8c-73bb-4b98-8cd2-8495667055db.mp4
-
-
-
-<br><p><b>App Documentation:</b></p>
-[TravAlerts_Report.docx](https://github.com/Emdad5353/TravAlerts/files/8692020/TravAlerts_Report.docx)
