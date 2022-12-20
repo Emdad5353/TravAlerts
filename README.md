@@ -22,7 +22,7 @@ https://user-images.githubusercontent.com/82696518/168408521-fb665d8c-73bb-4b98-
 
 
 <br><p><b>App Documentation:</b></p>
-[TravAlerts_Report.docx](https://github.com/Emdad5353/TravAlerts/files/8692020/TravAlerts_Report.docx)
+[TravAlerts_Report.docx] https://github.com/Emdad5353/TravAlerts/blob/master/TravAlerts%20Additional%20Files/TravAlertsDoc.docx
 
 <br><p><b>App Screenshots:</b></p>
 <div class="column">
